@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+.vscode/
+.session
+node_modules/
+package-lock.json
+log/
+activate_node.bash
