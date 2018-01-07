@@ -3,7 +3,7 @@ exports.profileUsername = function (req, res) {
     if (!req.headers.authorization) {
         return res.status(401).json({
             status: 401,
-            message: 'No credentials supplied'
+            message: 'No token supplied'
         });
         res.end();
     }

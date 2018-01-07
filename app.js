@@ -31,9 +31,10 @@ app.get('/', function (req, res) {
     res.send('Hello World');
 })
 
-app.post('/store_my_picture', userProfile.profilePicture); // Archive an audit
-app.post('/store_my_username', userProfile.profileUsername); // Archive an audit
+app.post('/store_my_picture', userProfile.profilePicture); // Store user picture
+app.post('/store_my_username', userProfile.profileUsername); // Store username
 
+//Mongodb connection and serve start
 MongoClient.connect('mongodb://anhar:anhar@ds247047.mlab.com:47047/jc_test', (err, mongoDb) => {
     if (err) return console.log(err);
     database.setMongoDatabase(mongoDb.db('jc_test'));    
